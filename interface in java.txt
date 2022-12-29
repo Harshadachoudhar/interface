@@ -1,0 +1,265 @@
+Program:
+//File Vehicle.java
+package exp3;
+
+public interface Vehicle
+
+public void gearChange(int a);
+public void speedUp();
+
+public void applyBrakes();
+public void display();
+
+t
+
+//File Bicycle.java
+package exp3;
+public class Bicycle implements Vehicle
+
+int gear,speed;
+
+public Bicycle() //default constructor for bicycle
+{
+System.out. printin("\tBicycle started successfully\n ");
+gear=1; //gear is 1 when Cycle starts
+speed=10; //speed is 10 when Cycle Starts
+
+}
+public void gearChange(int a)
+{
+
+if(a < 7 &&a > 0) //maximum gear for vehicle is 6
+gear =a;
+System.out.printIn("Gear changed Success fully");
+}
+
+else
+
+System.out.printin("Gear is Out Of Range \n");
+}
+public void speedUp()
+
+t
+if((speed+5) < 25 )
+{ //25 as maximum speed
+
+speed += 5;
+System.out.printin("Bicycles speed increased ");
+}
+else
+System.out.printIn("Speed Cannot Be Increased Above 25");
+}
+public void applyBrakes() //function to apply brakes
+if( (speed-5) > 0) // speed never be negative
+{
+speed -= 5; //per apply brakes bicycles speed is reduced by 5
+System.out.printin("Speed Reduced Successfull");
+}
+else
+{
+speed = 0;
+gear= 0;
+System.out.printin("Bicycle stopped Successfully\n ");
+}
+}
+public void display() //displays current status of bicycle
+
+{
+System.out.printIn("BICYCLE'S SPEED IS =" + speed +"Kmhr AND GEAR IS ="+ gear);
+}
+
+}
+//File Car.java
+package exp3;
+public class Car implements Vehicle
+
+int gear,speed;
+
+public Car() //default constructor for Car
+{
+System.out.printin("\tCar started successfully\n ");
+gear=1; //gear is 1 when Car starts
+speed=10; //speed is 10 when Car Starts
+
+}
+public void gearChange(int a)
+if(a < 6 &R&a > 0) //maximum gear for vehicle is 5
+
+gear =a;
+System.out.printIn("Car Gear changed Success fully");
+
+else
+System.out.printIn("Car Gear is Out Of Range \n");
+
+}
+public void speedUp()
+{
+
+if((speed + 5) < 125)
+{ //125 as maximum speed
+
+speed += 5;
+System.out.printIn("Car speed increased ");
+t
+else
+System.out.printin("Car Speed Cannot Be Increased Above 125");
+t
+public void applyBrakes() //function to apply brakes
+{
+if( (speed-5) > 0) // speed never be negative
+{
+speed -= 5; //per apply brakes Car speed is reduced by 5
+System.out.printIn("Car Speed Reduced Successfull");
+else
+{
+speed = 0;
+gear= 0;
+System.out.printIn("Car stopped Successfully\n ");
+public void display() //displays current status of bicycle
+{
+
+System.out.printin("Car SPEED IS =" + speed +"Kmhr AND GEAR IS ="+ gear);
+}
+//File Bike.java
+package exp3;
+public class Bike implements Vehicle
+
+int gear,speed;
+
+public Bike() //default constructor for Bike
+{
+System.out.printin("\tBike started successfully\n ");
+gear=1; //gear is 1 when Bike starts
+speed=10; //speed is 10 when Bike Starts
+
+}
+public void gearChange(int a)
+if(a< 5 &&a > 0) //maximum gear for vehicle is 4
+
+gear = a;
+System.out.printIn("Bike Gear changed Success fully");
+
+else
+System.out.printIn("Bike Gear is Out Of Range \n");
+
+}
+public void speedUp()
+
+{
+if((speed + 5) < 65)
+//65 as maximum speed
+
+speed += 5;
+System.out.printIn("Bike speed increased ");
+}
+else
+System.out.printIn("Speed Cannot Be Increased Above 65");
+}
+public void applyBrakes() //function to apply brakes
+{
+if( (speed-5) > 0) // speed never be negative
+{
+speed -= 5; //per apply brakes Bike speed is reduced by 5
+System.out.printIn("Bike Speed Reduced Successfull");
+}
+else
+{
+speed = 0;
+gear= 0;
+
+System.out.printIn("Bike stopped Successfully\n ");
+}
+
+public void display() //displays current status of bicycle
+{
+
+System.out.printin("Bike SPEED IS =" + speed +"Kmhr AND GEAR IS ="+ gear);
+//File TestVehical.java
+Package exp3;
+
+import java.util.Scanner;
+
+public class TestVehical
+
+{
+
+static Scanner sc=new Scanner(System.in);
+public static void main(String[] args)
+
+{
+
+Vehicle v=null; // vehicle interface reference created
+int y,z; //variable to choose vehicle
+
+do
+
+{
+
+System.out.printIn("SELECT VEHICLE");
+System.out.printin("1.BICYCLE");
+System.out.printin("2.CAR ");
+System.out.printin("3.BIKE");
+System.out.printin("4.Exit");
+System.out.printiIn("Choice: :");
+y=sc.nextInt();
+
+switch(y)
+
+dof
+
+{
+
+case 1:
+v=new Bicycle(); //object of bicycle class
+break;
+
+case 2:
+v= new Car(); //object of car class
+break;
+
+case 3:
+v=new Bike(); //object of bike class
+break;
+
+case 4:
+System.exit(0);
+
+default:
+System.out. printIn("INVALID INPUT");
+
++
+
+System.out.printIn("SELECT VEHICLE");
+System.out.printin("1. Speed Up");
+System,out.printin("2. Change gear");
+System, out.printin("3. Apply Brakes");
+System.out.printin("4. Display");
+System.out.printin("5. Change vehical");
+System, out.printin("Choice: :");
+zZ = sc.nextInt();
+switch(z)
+{
+case 1:
+v.speedUp();
+break;
+case 2:
+System.out.print("which gear you want? ");
+int a=sc.nextInt();
+v.gearChange(a);
+break;
+case 3:
+v.applyBrakes();
+break;
+case 4:
+v.display();
+break;
+default:
+System.out.printiIn("Invalid Input");
+
+}
+}while(z != 5);
+}while(y != 4);
+$
+
+Conclusion: In this experiment we studied interface in java.
+
